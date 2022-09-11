@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Combo&display=swap");
+
 *,
 *::before,
 *::after {
@@ -6,51 +8,58 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+:root {
+  --main-bg: black;
+  --main-col: #e5e5e5;
+  --yellow: #ffc123;
+}
+
 header {
-  background-color: black;
-  color: white;
+  background-color: var(--main-bg);
+  color: var(--main-col);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
   min-height: fit-content;
   height: 10vh;
-  padding: 1rem;
+  padding: 1.5rem 0;
   font-size: 1.2em;
-}
-
-header > *:not(:first-child) {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
+  font-family: "Combo", cursive;
 }
 
 header img {
+  min-height: 2em;
   height: 80%;
 }
 
 .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   gap: 2em;
 }
 
 .links a {
-  text-decoration: none;
-  color: inherit;
   margin-bottom: 0.5rem;
 }
 
 .links a::after {
   display: block;
   content: "";
-  background-color: white;
+  background-color: var(--main-col);
   height: 2px;
   width: 0;
   transition: width 300ms ease-in-out;
@@ -60,13 +69,17 @@ header img {
   width: 100%;
 }
 
-.contacts {
-  color: #ffc123;
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  color: var(--yellow);
   gap: 0.5rem;
 }
 
-.contacts > * {
-  border: 1px solid #ffc123;
+.socials > * {
+  border: 1px solid var(--yellow);
   width: 1.5em;
   height: 1.5em;
   display: flex;
@@ -78,7 +91,16 @@ header img {
   transition-timing-function: ease-in-out;
 }
 
-.contacts > *:hover {
+.socials > *:hover {
   color: black;
-  background-color: #ffc123;
+  background-color: var(--yellow);
+}
+
+footer {
+  background-color: var(--main-bg);
+  color: var(--main-col);
+}
+
+.contacts i {
+  color: var(--yellow);
 }
