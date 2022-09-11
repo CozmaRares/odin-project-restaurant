@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Combo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Roboto&family=Russo+One&display=swap");
 
 *,
 *::before,
@@ -19,10 +19,30 @@ ul {
   margin: 0;
 }
 
+button,
+input {
+  border: none;
+  outline: none;
+  color: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 :root {
   --main-bg: black;
   --main-col: #e5e5e5;
-  --yellow: #ffc123;
+  --secondary-bg: #313131;
+  --secondary-col: #afafaf;
+  --yellow: #ffc124;
+  font-family: "Roboto", sans-serif;
+}
+
+.full-bleed {
+  box-shadow: 0 0 0 100vmax var(--bg-col);
+  clip-path: inset(0 -100vmax);
 }
 
 header {
@@ -44,7 +64,7 @@ header img {
   height: 80%;
 }
 
-.links {
+header .links {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,11 +72,11 @@ header img {
   gap: 2em;
 }
 
-.links a {
+header .links a {
   margin-bottom: 0.5rem;
 }
 
-.links a::after {
+header .links a::after {
   display: block;
   content: "";
   background-color: var(--main-col);
@@ -65,7 +85,7 @@ header img {
   transition: width 300ms ease-in-out;
 }
 
-.links a:hover::after {
+header .links a:hover::after {
   width: 100%;
 }
 
@@ -85,7 +105,7 @@ header img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem;
+  padding: 0.2em;
   transition-property: background-color color;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
@@ -97,10 +117,105 @@ header img {
 }
 
 footer {
-  background-color: var(--main-bg);
+  --bg-col: var(--main-bg);
+
+  background-color: var(--bg-col);
   color: var(--main-col);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  width: 65%;
+  margin: 0 auto;
 }
 
-.contacts i {
+footer > div > *:first-child {
+  margin-bottom: 1rem;
+}
+
+footer h1 {
+  font-size: 1.8rem;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 2px;
+}
+
+footer img {
+  height: 2rem;
+}
+
+.info {
+  color: var(--secondary-col);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+footer .socials {
+  justify-content: left;
+  font-size: 1.2em;
+}
+
+footer .links {
+  color: var(--secondary-col);
+
+  font-size: 1.2em;
+}
+
+footer .links li {
+  width: fit-content;
+  margin-bottom: 0.5rem;
+}
+
+footer .links a {
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #00000000;
+
+  transition-property: border-color color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+footer .links a:hover {
   color: var(--yellow);
+  border-color: var(--yellow);
+}
+
+.contacts li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.contacts svg {
+  color: var(--yellow);
+}
+
+footer form > * {
+  display: block;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+footer input {
+  background-color: var(--secondary-bg);
+  padding: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+footer button {
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+  border-radius: 5px;
+  padding: 1rem;
+
+  transition-property: background-color color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+footer button:hover {
+  color: var(--main-bg);
+  background-color: var(--yellow);
 }
