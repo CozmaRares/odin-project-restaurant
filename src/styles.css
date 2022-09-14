@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Combo&family=Roboto&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Roboto&family=Teko&display=swap");
 
 *,
 *::before,
@@ -37,6 +37,9 @@ input {
   --secondary-bg: #313131;
   --secondary-col: #afafaf;
   --yellow: #ffc124;
+
+  --header-height: 10vh;
+
   font-family: "Roboto", sans-serif;
 }
 
@@ -53,7 +56,7 @@ header {
   justify-content: space-evenly;
   flex-direction: row;
   min-height: fit-content;
-  height: 10vh;
+  height: var(--header-height);
   padding: 1.5rem 0;
   font-size: 1.2em;
   font-family: "Combo", cursive;
@@ -135,7 +138,7 @@ footer > div > *:first-child {
 
 footer h1 {
   font-size: 1.8rem;
-  font-family: "Russo One", sans-serif;
+  font-family: "Teko", sans-serif;
   letter-spacing: 2px;
 }
 
