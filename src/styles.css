@@ -39,28 +39,34 @@ input {
   --yellow: #ffc124;
 
   --header-height: 10vh;
+  --std-width: 65vw;
 
   font-family: "Roboto", sans-serif;
+  background-color: var(--main-bg);
+  color: var(--main-col);
 }
 
-.full-bleed {
-  box-shadow: 0 0 0 100vmax var(--bg-col);
-  clip-path: inset(0 -100vmax);
+.aaa {
+  width: var(--std-width);
+  margin: 0 auto;
 }
 
 header {
   background-color: var(--main-bg);
-  color: var(--main-col);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
   min-height: fit-content;
   height: var(--header-height);
   padding: 1.5rem 0;
   font-size: 1.2em;
   font-family: "Combo", cursive;
   z-index: 1;
+}
+
+header div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 header img {
@@ -121,16 +127,10 @@ header .links a:hover::after {
 }
 
 footer {
-  --bg-col: var(--main-bg);
-
-  background-color: var(--bg-col);
-  color: var(--main-col);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  padding: 2rem;
-  width: 65%;
-  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 footer > div > *:first-child {
