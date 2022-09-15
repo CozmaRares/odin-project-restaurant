@@ -60,6 +60,7 @@ header {
   padding: 1.5rem 0;
   font-size: 1.2em;
   font-family: "Combo", cursive;
+  z-index: 1;
 }
 
 header img {
@@ -221,4 +222,14 @@ footer button {
 footer button:hover {
   color: var(--main-bg);
   background-color: var(--yellow);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  transition: top 500ms ease-in-out;
+}
+
+header:has(~ footer.show) {
+  top: -100%;
 }

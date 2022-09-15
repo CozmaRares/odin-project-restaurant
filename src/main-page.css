@@ -3,7 +3,7 @@
   height: calc(100vh - var(--header-height));
   display: grid;
   color: white;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   position: relative;
 }
@@ -40,9 +40,18 @@ video {
 
 .text h1 {
   font-family: "Teko", sans-serif;
-  font-size: 3em;
-  line-height: 1.2em;
+  font-size: 4em;
+  line-height: 0.8em;
   letter-spacing: 10px;
+  font-weight: 600;
+  color: var(--yellow);
+}
+
+.text h5 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2em;
+  line-height: 1.2em;
   font-weight: 500;
 }
 
