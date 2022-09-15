@@ -227,9 +227,11 @@ footer button:hover {
 header {
   position: sticky;
   top: 0;
-  transition: top 500ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  opacity: 1;
 }
 
 header:has(~ footer.show) {
-  top: -100%;
+  opacity: 0;
+  pointer-events: none;
 }
