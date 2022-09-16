@@ -62,20 +62,21 @@
 
 .menu > * {
   width: 100%;
+  margin-bottom: 6rem;
 }
 
-.menu > div {
+.menu-title {
   margin: 5rem 0;
   text-align: center;
 }
 
-.menu h1 {
+.menu-title h1 {
   font-size: 3rem;
   font-family: "Combo", cursive;
   color: var(--yellow);
 }
 
-.menu h4 {
+.menu-title h4 {
   font-size: 1.2em;
   font-weight: normal;
 }
@@ -84,7 +85,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 6rem;
 }
 
 .menu li {
@@ -105,7 +105,7 @@
   transition: opacity 300ms ease-in-out;
 }
 
-.menu img {
+.menu-text ~ img {
   width: 100%;
   aspect-ratio: 1 / 1.3;
   object-fit: cover;
@@ -122,10 +122,73 @@
   filter: brightness(35%);
 }
 
-.menu h2 {
+.menu-text ~ h2 {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  font-family: "Teko", sans-serif;
+  letter-spacing: 2px;
+  font-size: 2.5em;
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5rem;
+}
+
+.offers-text {
+  font-size: 1.2em;
+}
+
+.offers-text > :not(:first-child, :last-child) {
+  margin-bottom: 1rem;
+}
+
+.offers-text h4 {
+  font-size: 1.2em;
+  font-family: "Combo", cursive;
+  color: var(--yellow);
+}
+
+.offers-text h1 {
+  margin-top: 0.5rem;
+  font-family: "Teko", sans-serif;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1.1em;
+}
+
+.offers-text h1 span {
+  color: var(--yellow);
+}
+
+.offers-text .btn {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.offers-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+.offers-info > div {
+  display: flex;
+}
+
+.offers-info img {
+  height: 100px;
+  aspect-ratio: 1;
+}
+
+.offers-info h2 {
+  font-family: "Teko", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 2em;
 }

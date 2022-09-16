@@ -46,7 +46,7 @@ input {
   color: var(--main-col);
 }
 
-.aaa {
+.center {
   width: var(--std-width);
   margin: 0 auto;
 }
@@ -110,8 +110,8 @@ header .links a:hover::after {
 
 .socials > * {
   border: 1px solid var(--yellow);
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.7em;
+  height: 1.7em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,6 +119,7 @@ header .links a:hover::after {
   transition-property: background-color color;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
+  border-radius: 5px;
 }
 
 .socials > *:hover {
@@ -208,7 +209,8 @@ footer input {
   margin-bottom: 1rem;
 }
 
-footer button {
+.btn {
+  display: block;
   color: var(--yellow);
   border: 2px solid var(--yellow);
   border-radius: 5px;
@@ -219,7 +221,7 @@ footer button {
   transition-timing-function: ease-in-out;
 }
 
-footer button:hover {
+.btn:hover {
   color: var(--main-bg);
   background-color: var(--yellow);
 }
@@ -227,11 +229,12 @@ footer button:hover {
 header {
   position: sticky;
   top: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
   opacity: 1;
 }
 
 header:has(~ footer.show) {
   opacity: 0;
   pointer-events: none;
+  transition-duration: 300ms;
 }
