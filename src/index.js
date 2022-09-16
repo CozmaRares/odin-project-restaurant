@@ -3,7 +3,7 @@ import "./main-page.css";
 
 const observer = new IntersectionObserver(entries =>
   entries.forEach(entry => {
-    console.log(entry.target);
+    // console.log(entry.target);
 
     entry.isIntersecting
       ? entry.target.classList.add("show")

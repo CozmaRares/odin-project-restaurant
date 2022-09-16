@@ -122,7 +122,7 @@ header .links a:hover::after {
   border-radius: 5px;
 }
 
-.socials > *:hover {
+.socials > :hover {
   color: black;
   background-color: var(--yellow);
 }
@@ -134,7 +134,7 @@ footer {
   padding: 2rem 0;
 }
 
-footer > div > *:first-child {
+footer > div > :first-child {
   margin-bottom: 1rem;
 }
 
