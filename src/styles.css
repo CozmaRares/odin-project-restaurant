@@ -46,7 +46,7 @@ input {
   color: var(--main-col);
 }
 
-.center {
+.section-center {
   width: var(--std-width);
   margin: 0 auto;
 }

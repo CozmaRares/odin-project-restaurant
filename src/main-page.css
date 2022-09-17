@@ -1,3 +1,7 @@
+:root {
+  --card-color: #141414;
+}
+
 .hero {
   width: 100%;
   height: calc(100vh - var(--header-height));
@@ -204,7 +208,7 @@
 
 .about div {
   padding: 5rem 0;
-  background-color: #141414;
+  background-color: var(--card-color);
 }
 
 .text-wrapper {
@@ -242,6 +246,75 @@
   font-size: 1.2em;
 }
 
+.about .btn {
+  margin-top: 0.5rem;
+  font-size: 1.3em;
+}
+
 .about img {
   object-fit: cover;
+}
+
+.testimonials {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.testimonials h4 {
+  font-weight: 500;
+  color: var(--yellow);
+  font-family: "Combo", cursive;
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+}
+
+.testimonials h1 {
+  font-weight: 600;
+  font-family: "Teko", sans-serif;
+  font-size: 3.5em;
+  line-height: 1.2em;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.testimonials h1 span {
+  color: var(--yellow);
+}
+
+.testimonials-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: var(--card-color);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.testimonial-card img {
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.testimonial-card h3 {
+  margin: 0.5em 0;
+  font-size: 2.5em;
+  font-family: "Teko", sans-serif;
+  letter-spacing: 2px;
+}
+
+.testimonial-card p:first-of-type {
+  color: var(--secondary-col);
+  margin-bottom: 1rem;
+}
+
+.testimonial-card p:last-of-type {
+  color: var(--yellow);
+  font-weight: 600;
+  font-size: 1.2em;
 }
