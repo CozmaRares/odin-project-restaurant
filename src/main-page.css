@@ -309,12 +309,43 @@
 }
 
 .testimonial-card p:first-of-type {
+  width: 80%;
+  margin: 0 auto 1.5rem auto;
   color: var(--secondary-col);
-  margin-bottom: 1rem;
+  font-size: 1.1em;
 }
 
 .testimonial-card p:last-of-type {
   color: var(--yellow);
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  font-family: "Combo", cursive;
+  font-style: italic;
+}
+
+.brands {
+  background-color: var(--yellow);
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  gap: 0.5rem;
+}
+
+.brands > div {
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.1);
+  width: 250px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.brands img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 75%;
 }
