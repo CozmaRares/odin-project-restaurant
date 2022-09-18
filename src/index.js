@@ -15,3 +15,12 @@ const observer = new IntersectionObserver(entries =>
 );
 
 observer.observe(document.querySelector("footer"));
+
+document.querySelector("footer form").addEventListener("submit", event => {
+  event.preventDefault();
+  document.querySelector("footer input").value = "";
+});
+
+document
+  .querySelectorAll("[data-main-page]")
+  .forEach(element => element.addEventListener("mousedown", loadMainPage));

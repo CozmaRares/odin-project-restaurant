@@ -230,12 +230,9 @@ footer input {
 header {
   position: sticky;
   top: 0;
-  transition: opacity 50ms ease-in-out;
-  opacity: 1;
 }
 
 header:has(~ footer.show) {
-  opacity: 0;
-  pointer-events: none;
-  transition-duration: 300ms;
+  top: -100%;
+  transition: top 300ms ease-in-out;
 }
