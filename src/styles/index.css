@@ -70,6 +70,11 @@ header div {
   flex-direction: row;
 }
 
+#logo,
+.links {
+  cursor: pointer;
+}
+
 header img {
   min-height: 2em;
   height: 80%;
@@ -162,7 +167,6 @@ footer .socials {
 
 footer .links {
   color: var(--secondary-col);
-
   font-size: 1.2em;
 }
 

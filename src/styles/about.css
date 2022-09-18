@@ -1,0 +1,113 @@
+main > h1:first-child {
+  width: 100%;
+  text-align: center;
+  background-color: var(--yellow);
+  color: black;
+  font-family: "Teko", sans-serif;
+  font-size: 4em;
+}
+
+.staff {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.staff-title {
+  margin-bottom: 2rem;
+}
+
+.staff-title h4 {
+  font-family: "Combo", cursive;
+  color: var(--yellow);
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.staff-title h1 {
+  font-family: "Teko", sans-serif;
+  font-weight: 600;
+  font-size: 3.5em;
+  line-height: 1em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.staff-title h5 {
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+.staff-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.staff-card img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 0.85;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.staff-card h2 {
+  font-weight: 500;
+  font-family: "Teko", sans-serif;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+
+.staff-card h5 {
+  font-weight: normal;
+  color: var(--yellow);
+  font-size: 1.1em;
+  margin-bottom: 1.5rem;
+}
+
+.staff-card p {
+  color: var(--secondary-col);
+}
+
+.hiring {
+  text-align: left;
+  background-color: var(--yellow);
+  color: black;
+  padding: 2.5rem 3.5rem;
+  margin: 6rem 0;
+  position: relative;
+}
+
+.hiring h1 {
+  font-family: "Teko", sans-serif;
+  font-size: 4em;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.hiring p {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.hiring a {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  margin-bottom: -2px;
+}
+
+.hiring img {
+  height: 60%;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%) rotateZ(45deg) rotateY(180deg);
+}

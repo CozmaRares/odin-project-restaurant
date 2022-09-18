@@ -144,27 +144,6 @@ export default function loadMainPage() {
   };
 
   const createAbout = () => {
-    const wrapper = document.createElement("div", {
-      className: "text-wrapper",
-      innerHTML: `
-        <h4>Our story</h4>
-        <h1>ABOUT BEER BOUTIQUE</h1>
-        <p>
-          Welcome to Beer Boutique! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Facilis, sapiente.
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-          deserunt totam accusantium rem quibusdam hic quod! Nihil accusantium
-          reprehenderit accusamus eius, vitae dolor dolorem vel ut aperiam id
-          rem sequi doloribus quis doloremque, expedita voluptatum illo,
-          voluptatibus a repudiandae animi. Odio doloremque eum neque animi eius
-          maxime obcaecati excepturi voluptates?
-        </p>
-        <button class="btn">Learn more</button>
-      `
-    });
-
     return createElement("section", { className: "about" }, [
       createElement("div", {
         innerHTML: `
