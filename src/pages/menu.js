@@ -76,7 +76,7 @@ export default function loadMenuPage() {
         items: [
           { name: "monkey sour", price: 10 },
           { name: "old fashioned", price: 11 },
-          { name: "pina colada", price: 10 },
+          { name: "piña colada", price: 10 },
           { name: "mojito", price: 11 },
           { name: "bramble", price: 13 }
         ]
@@ -167,49 +167,45 @@ export default function loadMenuPage() {
     let scroll =
       parseInt(computedStyle.getPropertyValue("--scroll")) + direction;
 
-    const scrollTo = scroll => {
-      container.style.setProperty("--scroll", `${scroll}`);
-      container.style.setProperty("transition", "none");
+    const maxScroll = container.children.length - 2;
+
+    let reachedEnd = true;
+
+    if (scroll > 0) scroll -= maxScroll;
+    else if (scroll < -maxScroll) scroll += maxScroll;
+    else reachedEnd = false;
+
+    if (reachedEnd) {
+      scroll -= direction;
+      container.style.setProperty("--scroll", `${scroll}}`);
       container.style.transform = `translateX(${(itemWidth + gap) * scroll}vw)`;
+      scroll += direction;
+    }
 
-      setTimeout(() => {
-        container.style.setProperty("transition", "var(--transition)");
-      }, 20);
-    };
+    setTimeout(() => {
+      container.style.setProperty("--scroll", `${scroll}`);
 
-    if (scroll === 0)
-      setTimeout(() => {
-        scrollTo(-container.children.length + 2);
-      }, 301);
-    else if (scroll === -container.children.length + 2)
-      setTimeout(() => {
-        scrollTo(0);
-      }, 301);
+      container.classList.add("scroll");
+      setTimeout(() => container.classList.remove("scroll"), 300);
 
-    container.style.setProperty("--scroll", `${scroll}`);
+      container.style.transform = `translateX(${(itemWidth + gap) * scroll}vw)`;
+    }, 1);
+  };
 
-    container.style.transform = `translateX(${(itemWidth + gap) * scroll}vw)`;
+  const findContainer = element => {
+    element = element.nextElementSibling;
+
+    while (element.className.indexOf("wrapper") === -1)
+      element = element.nextElementSibling;
+
+    return element.children[0];
   };
 
   document.querySelectorAll(".caret.left").forEach(el => {
-    let container = el.nextElementSibling;
-
-    while (container.className.indexOf("wrapper") === -1)
-      container = container.nextElementSibling;
-
-    container = container.children[0];
-
-    el.onmousedown = () => scroll(1, container);
+    el.onmousedown = () => scroll(1, findContainer(el));
   });
 
   document.querySelectorAll(".caret.right").forEach(el => {
-    let container = el.nextElementSibling;
-
-    while (container.className.indexOf("wrapper") === -1)
-      container = container.nextElementSibling;
-
-    container = container.children[0];
-
-    el.onmousedown = () => scroll(-1, container);
+    el.onmousedown = () => scroll(-1, findContainer(el));
   });
 }

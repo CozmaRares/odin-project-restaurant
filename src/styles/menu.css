@@ -58,7 +58,6 @@
 }
 
 .menu-list-wrapper {
-  /* width: fit-content; */
   overflow-x: hidden;
 }
 
@@ -66,14 +65,16 @@
   --item-width: 30vw;
   --gap: 5vw;
   --scroll: -1;
-  --transition: transform 300ms ease-in-out;
 
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: var(--item-width);
   gap: var(--gap);
   transform: translateX(calc(var(--scroll) * (var(--item-width) + var(--gap))));
-  transition: var(--transition);
+}
+
+.menu-lists-container.scroll {
+  transition: transform 300ms ease-in-out;
 }
 
 .menu-list {
