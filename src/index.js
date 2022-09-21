@@ -1,8 +1,8 @@
 import "./styles/index.css";
-import "./styles/shared-styles.css";
 
 import loadMainPage from "./pages/main-page";
-import loadAboutPage from "./pages/about.js";
+import loadAboutPage from "./pages/about";
+import loadMenuPage from "./pages/menu";
 
 loadMainPage();
 
@@ -30,21 +30,25 @@ const observer = new IntersectionObserver(entries =>
 
 observer.observe(document.querySelector("footer"));
 
-document.querySelector("footer form").addEventListener("submit", event => {
+document.querySelector("footer form").onsubmit = event => {
   event.preventDefault();
   document.querySelector("footer input").value = "";
-});
+};
 
 document
   .querySelectorAll("[data-main-page]")
-  .forEach(element =>
-    element.addEventListener("mousedown", () => pageLoaderWrapper(loadMainPage))
+  .forEach(
+    element => (element.onmousedown = () => pageLoaderWrapper(loadMainPage))
   );
 
 document
   .querySelectorAll("[data-about]")
-  .forEach(element =>
-    element.addEventListener("mousedown", () =>
-      pageLoaderWrapper(loadAboutPage)
-    )
+  .forEach(
+    element => (element.onmousedown = () => pageLoaderWrapper(loadAboutPage))
+  );
+
+document
+  .querySelectorAll("[data-menu]")
+  .forEach(
+    element => (element.onmousedown = () => pageLoaderWrapper(loadMenuPage))
   );

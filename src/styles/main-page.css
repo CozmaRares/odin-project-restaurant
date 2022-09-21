@@ -187,7 +187,7 @@
 
 .offers-info img {
   height: 100px;
-  aspect-ratio: 1;
+  width: 100px;
 }
 
 .offers-info h2 {
@@ -244,7 +244,7 @@
 
 .testimonial-card img {
   width: 150px;
-  aspect-ratio: 1;
+  height: 150px;
   border-radius: 50%;
 }
 

@@ -1,0 +1,128 @@
+.menu-section {
+  position: relative;
+}
+
+.menu-section .caret {
+  --border: 2px solid white;
+
+  content: "";
+  position: absolute;
+  top: 60%;
+  width: 20px;
+  height: 20px;
+  border-top: var(--border);
+  border-left: var(--border);
+  cursor: pointer;
+}
+
+.menu-section .caret:hover {
+  border-color: #888888;
+}
+
+.menu-section .caret:active {
+  border-color: #666666;
+}
+
+.menu-section .caret.left {
+  transform: rotateZ(-45deg);
+  left: -5%;
+}
+
+.menu-section .caret.right {
+  transform: rotateZ(135deg);
+  right: -5%;
+}
+
+.menu-section-title {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.menu-section-title h4 {
+  font-family: "Combo", cursive;
+  color: var(--yellow);
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.menu-section-title h1 {
+  font-family: "Teko", sans-serif;
+  font-weight: 600;
+  font-size: 3em;
+  line-height: 1.2em;
+}
+
+.menu-section-title p {
+  margin-top: 0.5rem;
+  color: var(--secondary-col);
+}
+
+.menu-list-wrapper {
+  /* width: fit-content; */
+  overflow-x: hidden;
+}
+
+.menu-lists-container {
+  --item-width: 30vw;
+  --gap: 5vw;
+  --scroll: -1;
+  --transition: transform 300ms ease-in-out;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--item-width);
+  gap: var(--gap);
+  transform: translateX(calc(var(--scroll) * (var(--item-width) + var(--gap))));
+  transition: var(--transition);
+}
+
+.menu-list {
+  margin: 5rem 0;
+  font-size: 2em;
+}
+
+.menu-list p {
+  font-family: "Teko", sans-serif;
+}
+
+.menu-list > p {
+  color: var(--yellow);
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+}
+
+.menu-list li {
+  margin: 1.5rem 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.item .underline {
+  flex: 1;
+  border-bottom: 2px dotted #696969;
+  height: 1em;
+  margin: 0 5px;
+}
+
+.item > p:last-child {
+  color: var(--yellow);
+}
+
+.item > p:last-child::before {
+  content: "$";
+}
+
+.item-description {
+  color: var(--secondary-col);
+  font-size: 0.5em;
+}
+
+.menu-img {
+  width: var(--std-width);
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}

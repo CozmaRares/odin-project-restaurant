@@ -240,3 +240,70 @@ header:has(~ footer.show) {
   top: -100%;
   transition: top 300ms ease-in-out;
 }
+
+main > h1:first-child {
+  width: 100%;
+  text-align: center;
+  background-color: var(--yellow);
+  color: black;
+  font-family: "Teko", sans-serif;
+  font-size: 4em;
+  font-weight: normal;
+}
+
+.spacer {
+  margin: 5rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+}
+
+.about > * {
+  width: 50%;
+}
+
+.about div {
+  padding: 5rem 0;
+  background-color: var(--card-color);
+}
+
+.text-wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.about h4 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--yellow);
+  font-family: "Combo", cursive;
+}
+
+.about h1 {
+  font-weight: 600;
+  font-family: "Teko", sans-serif;
+  font-size: 3.5em;
+  letter-spacing: 4px;
+}
+
+.about p {
+  padding: 2rem 0;
+}
+
+.about p:first-of-type {
+  color: var(--secondary-col);
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.about p:last-of-type {
+  color: var(--secondary-col);
+  opacity: 0.7;
+  font-size: 1.2em;
+}
+
+.about img {
+  object-fit: cover;
+}
