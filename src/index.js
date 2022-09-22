@@ -1,11 +1,11 @@
 import "./styles/index.css";
-import "./styles/book.css";
 
 import loadMainPage from "./pages/main-page";
 import loadAboutPage from "./pages/about";
 import loadMenuPage from "./pages/menu";
+import loadBookingPage from "./pages/booking";
 
-// loadMainPage();
+loadMainPage();
 addClickEvents();
 
 function pageLoaderWrapper(loader) {
@@ -58,6 +58,13 @@ function addClickEvents() {
     .querySelectorAll("[data-menu]")
     .forEach(
       element => (element.onmousedown = () => pageLoaderWrapper(loadMenuPage))
+    );
+
+  document
+    .querySelectorAll("[data-book]")
+    .forEach(
+      element =>
+        (element.onmousedown = () => pageLoaderWrapper(loadBookingPage))
     );
 }
 

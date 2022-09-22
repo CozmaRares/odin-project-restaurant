@@ -142,19 +142,21 @@ export default function loadMenuPage() {
 
   const main = document.querySelector("main");
 
-  main.appendChild(createElement("h1", { innerText: "MENU" }));
-  main.appendChild(createElement("div", { className: "spacer" }));
-  main.appendChild(createList(barList));
-  main.appendChild(
+  const children = [
+    createElement("h1", { innerText: "MENU" }),
+    createElement("div", { className: "spacer" }),
+    createList(barList),
     createElement("img", {
       src: "assets/images/food-and-drink.jpg",
       alt: "illustration",
       className: "menu-img"
-    })
-  );
-  main.appendChild(createElement("div", { className: "spacer" }));
-  main.appendChild(createList(foodList));
-  main.appendChild(createElement("div", { className: "spacer" }));
+    }),
+    createElement("div", { className: "spacer" }),
+    createList(foodList),
+    createElement("div", { className: "spacer" })
+  ];
+
+  children.forEach(child => main.appendChild(child));
 
   const scroll = (direction, container) => {
     const computedStyle = getComputedStyle(container);

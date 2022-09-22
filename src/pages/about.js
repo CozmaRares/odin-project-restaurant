@@ -94,12 +94,13 @@ export default function loadAboutPage() {
 
   const main = document.querySelector("main");
 
-  main.appendChild(
+  const children = [
     createElement("h1", {
       innerText: "ABOUT BEER BOUTIQUE"
-    })
-  );
+    }),
+    createAbout(),
+    createStaff()
+  ];
 
-  main.appendChild(createAbout());
-  main.appendChild(createStaff());
+  children.forEach(child => main.appendChild(child));
 }

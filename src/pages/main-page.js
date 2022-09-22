@@ -249,9 +249,13 @@ export default function loadMainPage() {
 
   const main = document.querySelector("main");
 
-  main.appendChild(createHero());
-  main.appendChild(createMenu());
-  main.appendChild(createAbout());
-  main.appendChild(createTestimonials());
-  main.appendChild(createBrands());
+  const children = [
+    createHero(),
+    createMenu(),
+    createAbout(),
+    createTestimonials(),
+    createBrands()
+  ];
+
+  children.forEach(child => main.appendChild(child));
 }
