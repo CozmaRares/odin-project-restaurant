@@ -1,4 +1,5 @@
 import "./styles/index.css";
+import "./styles/book.css";
 
 import loadMainPage from "./pages/main-page";
 import loadAboutPage from "./pages/about";

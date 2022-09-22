@@ -1,0 +1,29 @@
+section.contacts ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+section.contacts li {
+  gap: 0.7rem;
+}
+
+.aaa > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4em;
+  width: 4em;
+  background-color: var(--secondary-bg);
+  border-radius: 1000px;
+}
+
+.aaa svg {
+  height: 70%;
+}
+
+.aaa h1 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
