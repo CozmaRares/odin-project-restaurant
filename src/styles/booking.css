@@ -64,7 +64,7 @@ section.contacts li {
 .form input {
   background-color: black;
   display: block;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   color: white;
   width: 100%;
 }

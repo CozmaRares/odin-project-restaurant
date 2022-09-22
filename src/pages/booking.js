@@ -92,10 +92,37 @@ export default function loadBookingPage() {
           id: "main-date",
           name: "main-date",
           type: "date",
+          value: getTodayDate(),
           required: ""
         }
       }
     ];
+
+    const form = createElement("form", {}, [
+      ...inputs.map(({ label, inputProps }) =>
+        createElement("div", {}, [
+          createElement("label", {
+            htmlFor: inputProps.id,
+            innerText: label
+          }),
+          createElement("input", inputProps)
+        ])
+      ),
+      createElement("button", {
+        type: "submit",
+        className: "btn",
+        innerText: "Reserve a table"
+      })
+    ]);
+
+    form.onsubmit = event => {
+      event.preventDefault();
+
+      form.querySelectorAll(":scope input").forEach(inp => {
+        if (inp.type !== "date") inp.value = "";
+        else inp.value = getTodayDate();
+      });
+    };
 
     return createElement(
       "section",
@@ -107,22 +134,7 @@ export default function loadBookingPage() {
           src: "assets/images/location.png",
           alt: "location"
         }),
-        createElement("form", {}, [
-          ...inputs.map(({ label, inputProps }) =>
-            createElement("div", {}, [
-              createElement("label", {
-                htmlFor: inputProps.id,
-                innerText: label
-              }),
-              createElement("input", inputProps)
-            ])
-          ),
-          createElement("button", {
-            type: "submit",
-            className: "btn",
-            innerText: "Reserve a table"
-          })
-        ])
+        form
       ]
     );
   };
@@ -141,4 +153,8 @@ export default function loadBookingPage() {
   ];
 
   children.forEach(child => main.appendChild(child));
+}
+
+function getTodayDate() {
+  return new Date(Date.now()).toISOString().split("T")[0];
 }

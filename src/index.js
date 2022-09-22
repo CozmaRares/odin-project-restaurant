@@ -33,13 +33,10 @@ const observer = new IntersectionObserver(entries =>
 
 observer.observe(document.querySelector("footer"));
 
-document.querySelectorAll("form").forEach(
-  form =>
-    (form.onsubmit = event => {
-      event.preventDefault();
-      document.querySelectorAll("input").forEach(inp => (inp.value = ""));
-    })
-);
+document.querySelector("footer form").onsubmit = event => {
+  event.preventDefault();
+  document.querySelector("footer input").value = "";
+};
 
 function addClickEvents() {
   document
@@ -68,4 +65,3 @@ function addClickEvents() {
     );
 }
 
-// new Date(Date.now()).toLocaleDateString()
