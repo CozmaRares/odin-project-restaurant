@@ -106,6 +106,39 @@
         </ul>
       </section>
       <div class="spacer"></div>
+      <section class="form section-center">
+        <img src="assets/images/location.png" alt="location" />
+        <form>
+          <label for="main-name">name</label>
+          <input
+            id="main-name"
+            name="main-name"
+            type="text"
+            placeholder="Name"
+            required
+          />
+          <label for="main-number">Phone number</label>
+          <input
+            id="main-number"
+            name="main-number"
+            type="text"
+            placeholder="Phone number"
+            required
+          />
+          <label for="main-guests">Number of guests</label>
+          <input
+            id="main-guests"
+            name="main-guests"
+            type="number"
+            placeholder="Number of guests"
+            required
+          />
+          <label for="main-date">Choose a date</label>
+          <input id="main-date" name="main-date" type="date" required />
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </section>
+      <div class="spacer"></div>
     </main>
     <footer class="section-center">
       <div>
@@ -190,12 +223,12 @@
         </ul>
       </div>
       <div>
-        <h1><label for="email">Subscribe</label></h1>
+        <h1><label for="footer-email">Subscribe</label></h1>
         <form>
           <input
             type="email"
-            name="email"
-            id="email"
+            name="footer-email"
+            id="footer-email"
             placeholder="Email address"
             required
           />

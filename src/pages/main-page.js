@@ -85,6 +85,13 @@ export default function loadMainPage() {
       )
     );
 
+    const button = createElement("button", {
+      className: "btn",
+      innerText: "Learn more"
+    });
+
+    button.dataset.menu = "";
+
     const offersText = createElement(
       "div",
       {
@@ -99,7 +106,7 @@ export default function loadMainPage() {
           innerHTML:
             "We offer a simple and tasty menu<br/>for true beer connoisseurs."
         }),
-        createElement("button", { className: "btn", innerText: "Learn more" })
+        button
       ]
     );
 
@@ -162,7 +169,7 @@ export default function loadMainPage() {
             voluptatibus a repudiandae animi. Odio doloremque eum neque animi eius
             maxime obcaecati excepturi voluptates?
           </p>
-          <button class="btn">Learn more</button>
+          <button class="btn" data-about>Learn more</button>
         </div> 
         `
       }),
@@ -207,7 +214,7 @@ export default function loadMainPage() {
         createElement("h4", { innerText: "Testimonials" }),
         createElement("h1", {
           innerHTML:
-            " WHAT OUR <span>CLIENTS</span> SAY<br/>ABOUT <span>US</span>"
+            " WHAT OUR <span>CLIENTS</span><br/>SAY ABOUT <span>US</span>"
         }),
         container
       ]

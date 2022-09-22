@@ -16,7 +16,7 @@ section.contacts li {
   height: 4em;
   width: 4em;
   background-color: var(--secondary-bg);
-  border-radius: 1000px;
+  border-radius: 50%;
 }
 
 .aaa svg {
@@ -26,4 +26,48 @@ section.contacts li {
 .aaa h1 {
   font-weight: 500;
   margin-bottom: 0.5rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
+}
+
+.form > * {
+  border-radius: 5px;
+}
+
+.form img {
+  display: block;
+  object-fit: cover;
+}
+
+.form form {
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-size: 1.2em;
+}
+
+.form form > * {
+  width: 60%;
+  border-radius: 5px;
+}
+
+.form label {
+  display: none;
+}
+
+.form input {
+  background-color: black;
+  display: block;
+  padding: 1rem 0.5rem;
+  color: white;
+}
+
+.form input[type="date"] {
+  color-scheme: dark;
 }
