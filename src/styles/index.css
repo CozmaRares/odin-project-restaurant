@@ -61,6 +61,13 @@ header {
   font-size: 1.2em;
   font-family: "Combo", cursive;
   z-index: 1;
+  position: sticky;
+  top: 0;
+}
+
+header:has(~ footer.show) {
+  top: -100%;
+  transition: top 300ms ease-in-out;
 }
 
 header div {
@@ -230,16 +237,6 @@ footer input {
 .btn:hover {
   color: var(--main-bg);
   background-color: var(--yellow);
-}
-
-header {
-  position: sticky;
-  top: 0;
-}
-
-header:has(~ footer.show) {
-  top: -100%;
-  transition: top 300ms ease-in-out;
 }
 
 main > h1:first-child {
