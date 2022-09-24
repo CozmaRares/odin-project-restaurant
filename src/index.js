@@ -1,13 +1,10 @@
 import "./styles/index.css";
-import "./styles/blog.css";
 
 import loadMainPage from "./pages/main-page";
 import loadAboutPage from "./pages/about";
 import loadMenuPage from "./pages/menu";
 import loadBookingPage from "./pages/booking";
-
-// loadMainPage();
-addClickEvents();
+import loadBlogPage from "./pages/blog";
 
 function pageLoaderWrapper(loader) {
   window.scrollTo({
@@ -15,12 +12,12 @@ function pageLoaderWrapper(loader) {
     behavior: "smooth"
   });
 
-  setTimeout(() => {
-    document.querySelector("main").innerHTML = "";
-    loader();
-    addClickEvents();
-  }, 300);
+  document.querySelector("main").innerHTML = "";
+  loader();
+  addClickEvents();
 }
+
+pageLoaderWrapper(loadMainPage);
 
 const observer = new IntersectionObserver(entries =>
   entries.forEach(entry => {
@@ -59,10 +56,15 @@ function addClickEvents() {
     );
 
   document
+    .querySelectorAll("[data-blog]")
+    .forEach(
+      element => (element.onmousedown = () => pageLoaderWrapper(loadBlogPage))
+    );
+
+  document
     .querySelectorAll("[data-book]")
     .forEach(
       element =>
         (element.onmousedown = () => pageLoaderWrapper(loadBookingPage))
     );
 }
-

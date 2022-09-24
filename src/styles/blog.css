@@ -57,6 +57,7 @@
   font-family: "Combo", cursive;
   font-style: italic;
   font-size: 1.1em;
+  text-transform: capitalize;
 }
 
 .blog-text h1 {
@@ -64,6 +65,7 @@
   font-family: "Teko", sans-serif;
   font-size: 2em;
   line-height: 1em;
+  text-transform: uppercase;
 }
 
 .blog-info {
@@ -81,6 +83,6 @@
 }
 
 .blog-info .line {
-  border-left: 2px solid white;
+  border-left: 2px solid var(--yellow);
   height: 1.2em;
 }

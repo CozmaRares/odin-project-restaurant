@@ -7,7 +7,7 @@ export default function loadMenuPage() {
       className: "menu-section-title",
       innerHTML: `
         <h4>${title}</h4>
-        <h1>${title.toUpperCase()} MENU</h1>
+        <h1>${title} MENU</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, aliquid!
         </p>
@@ -22,7 +22,7 @@ export default function loadMenuPage() {
           createElement("li", {
             innerHTML: `
               <div class="item">
-              <p>${name.toUpperCase()}</p>
+              <p>${name}</p>
               <div class="underline"></div>
               <p>${Number.isInteger(price) ? price : price.toFixed(2)}</p>
               </div>
@@ -35,7 +35,7 @@ export default function loadMenuPage() {
       );
 
       return createElement("div", { className: "menu-list" }, [
-        createElement("p", { innerText: title.toUpperCase() }),
+        createElement("p", { innerText: title }),
         ul
       ]);
     };
@@ -69,7 +69,7 @@ export default function loadMenuPage() {
   };
 
   const barList = {
-    title: "Bar",
+    title: "bar",
     lists: [
       {
         title: "cocktails",
@@ -105,7 +105,7 @@ export default function loadMenuPage() {
   };
 
   const foodList = {
-    title: "Food",
+    title: "food",
     lists: [
       {
         title: "snacks",
