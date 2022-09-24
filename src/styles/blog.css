@@ -1,0 +1,74 @@
+.grid {
+  display: grid;
+  grid-auto-rows: 300px;
+  gap: 1rem;
+}
+
+.grid img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.grid.first {
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid.first > :first-child {
+  grid-row: 1 / -1;
+  font-size: 1.2em;
+}
+
+.grid.second {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.blog-post {
+  border-radius: 10px;
+  position: relative;
+}
+
+.blog-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000ac;
+  padding: 1rem;
+}
+
+.blog-text h4 {
+  font-weight: 500;
+  color: var(--yellow);
+  font-family: "Combo", cursive;
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+.blog-text h1 {
+  font-weight: 500;
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.blog-info {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5rem;
+}
+
+.blog-info p:first-of-type::before {
+  content: "By ";
+  color: var(--yellow);
+  font-family: "Combo", cursive;
+  font-size: 1.1em;
+}
+
+.blog-info .line {
+  border-left: 2px solid white;
+  height: 1.2em;
+}

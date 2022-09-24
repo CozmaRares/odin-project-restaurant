@@ -1,11 +1,12 @@
 import "./styles/index.css";
+import "./styles/blog.css";
 
 import loadMainPage from "./pages/main-page";
 import loadAboutPage from "./pages/about";
 import loadMenuPage from "./pages/menu";
 import loadBookingPage from "./pages/booking";
 
-loadMainPage();
+// loadMainPage();
 addClickEvents();
 
 function pageLoaderWrapper(loader) {
