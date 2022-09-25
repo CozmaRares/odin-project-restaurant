@@ -112,10 +112,11 @@
   background-color: #242424;
   padding: 5rem;
   margin-top: 5rem;
-  border-radius: 20px;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 20px;
+  border: 2px solid white;
 }
 
 .blogs-overlay h1 {
