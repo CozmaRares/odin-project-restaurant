@@ -1,6 +1,8 @@
 import "../styles/booking.css";
 import { createElement } from "../utils/create-element";
 
+import img from "../../assets/images/location.png";
+
 export default function loadBookingPage() {
   const createContacts = () => {
     const contacts = [
@@ -131,7 +133,7 @@ export default function loadBookingPage() {
       },
       [
         createElement("img", {
-          src: "assets/images/location.png",
+          src: img,
           alt: "location"
         }),
         form

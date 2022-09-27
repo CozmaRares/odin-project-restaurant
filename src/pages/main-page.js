@@ -1,6 +1,26 @@
 import "../styles/main-page.css";
 import { createElement } from "../utils/create-element";
 
+import draftBeer from "../../assets/draft-beer.mp4";
+
+import beerGlass from "../../assets/images/beer-glass.jpg";
+import hamburger from "../../assets/images/hamburger.jpg";
+import happyHour from "../../assets/images/happy-hour.jpg";
+
+import beerOnTap from "../../assets/svg/icons/beer-on-tap.svg";
+import bottledBeer from "../../assets/svg/icons/bottled-beer.svg";
+import cocktail from "../../assets/svg/icons/cocktail.svg";
+import snacks from "../../assets/svg/icons/snack.svg";
+
+import bar from "../../assets/images/bar.jpg";
+
+import corona from "../../assets/svg/brands/corona.svg";
+import miller from "../../assets/svg/brands/miller.svg";
+import hoegaarden from "../../assets/svg/brands/hoegaarden.svg";
+import carlsberg from "../../assets/svg/brands/carlsberg.svg";
+import budweiser from "../../assets/svg/brands/budweiser.svg";
+import heineken from "../../assets/svg/brands/heineken.svg";
+
 export default function loadMainPage() {
   const createHero = () => {
     const video = createElement(
@@ -11,7 +31,7 @@ export default function loadMainPage() {
         loop: "true"
       },
       createElement("source", {
-        src: "assets/draft-beer.mp4",
+        src: draftBeer,
         type: "video/mp4"
       })
     );
@@ -63,9 +83,9 @@ export default function loadMainPage() {
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolorum illo quo, maxime ea minus et beatae recusandae, in nihil quae totam repellendus, quam deserunt accusamus odit delectus nostrum cumque! Pariatur, repellendus? Consequatur libero excepturi veritatis, inventore dignissimos vel perspiciatis?";
 
     const menuItems = [
-      { img: "beer-glass", h2: "BEER MENU" },
-      { img: "happy-hour", h2: "" },
-      { img: "hamburger", h2: "FOOD MENU" }
+      { img: beerGlass, h2: "BEER MENU" },
+      { img: happyHour, h2: "" },
+      { img: hamburger, h2: "FOOD MENU" }
     ];
 
     const ul = createElement(
@@ -77,7 +97,7 @@ export default function loadMainPage() {
             createElement("p", { innerText: cardsDescription })
           ]),
           createElement("img", {
-            src: `assets/images/${img}.jpg`,
+            src: img,
             alt: img.replaceAll("-", " ")
           }),
           createElement("h2", { innerText: h2 })
@@ -111,10 +131,10 @@ export default function loadMainPage() {
     );
 
     const offerItems = [
-      { img: "bottled-beer", h2: "BOTTLED BEER" },
-      { img: "snack", h2: "SNACKS" },
-      { img: "beer-on-tap", h2: "BEER ON TAP" },
-      { img: "cocktail", h2: "COCKTAILS" }
+      { img: bottledBeer, h2: "BOTTLED BEER" },
+      { img: snacks, h2: "SNACKS" },
+      { img: beerOnTap, h2: "BEER ON TAP" },
+      { img: cocktail, h2: "COCKTAILS" }
     ];
 
     const offersInfo = createElement(
@@ -123,7 +143,7 @@ export default function loadMainPage() {
       offerItems.map(({ img, h2 }) =>
         createElement("div", {
           innerHTML: `
-          <img src="assets/svg/icons/${img}.svg" alt="icon" />
+          <img src="${img}" alt="icon" />
           <div>
               <h2>${h2}</h2>
               <p>
@@ -173,7 +193,7 @@ export default function loadMainPage() {
         </div> 
         `
       }),
-      createElement("img", { src: "assets/images/bar.jpg", alt: "bar image" })
+      createElement("img", { src: bar, alt: "bar image" })
     ]);
   };
 
@@ -222,14 +242,7 @@ export default function loadMainPage() {
   };
 
   const createBrands = () => {
-    const brands = [
-      "corona",
-      "miller",
-      "hoegaarden",
-      "carlsberg",
-      "budweiser",
-      "heineken"
-    ];
+    const brands = [corona, miller, hoegaarden, carlsberg, budweiser, heineken];
 
     return createElement(
       "section",
@@ -239,7 +252,7 @@ export default function loadMainPage() {
           "div",
           {},
           createElement("img", {
-            src: `assets/svg/brands/${brand}.svg`,
+            src: brand,
             alt: "beer brand"
           })
         )

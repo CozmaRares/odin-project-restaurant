@@ -1,6 +1,8 @@
 import "../styles/menu.css";
 import { createElement } from "../utils/create-element";
 
+import img from "../../assets/images/food-and-drink.jpg";
+
 export default function loadMenuPage() {
   const createList = ({ title, lists }) => {
     const sectionTitle = createElement("div", {
@@ -147,7 +149,7 @@ export default function loadMenuPage() {
     createElement("div", { className: "spacer" }),
     createList(barList),
     createElement("img", {
-      src: "assets/images/food-and-drink.jpg",
+      src: img,
       alt: "illustration",
       className: "menu-img"
     }),

@@ -1,6 +1,8 @@
 import "../styles/blog.css";
 import { createElement } from "../utils/create-element";
 
+import img from "../../assets/images/bar.jpg";
+
 export default function loadBlogPage() {
   // there should be an api call to fetch blog posts
   // I'll just hard code them for now
@@ -31,7 +33,7 @@ export default function loadBlogPage() {
   };
 
   const blogProps = {
-    image: "assets/images/bar.jpg",
+    image: img,
     type: "filler",
     title: "404 title not found",
     author: "No one",

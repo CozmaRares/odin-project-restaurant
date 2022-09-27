@@ -1,6 +1,10 @@
 import "../styles/about.css";
 import { createElement } from "../utils/create-element";
 
+import img from "../../assets/images/group.jpg";
+import pfp from "../../assets/images/pfp.jpg";
+import beer from "../../assets/svg/icons/beer-mug.svg";
+
 export default function loadAboutPage() {
   const createAbout = () => {
     return createElement(
@@ -10,7 +14,7 @@ export default function loadAboutPage() {
       },
       [
         createElement("img", {
-          src: "assets/images/group.jpg",
+          src: img,
           alt: "group photo"
         }),
         createElement("div", {
@@ -57,7 +61,7 @@ export default function loadAboutPage() {
         createElement("div", {
           className: "staff-card",
           innerHTML: `
-            <img src="assets/images/pfp.jpg" alt="picture" />
+            <img src="${pfp}" alt="picture" />
             <h2>John Doe</h2>
             <h5>${position}</h5>
             <p>
@@ -79,7 +83,7 @@ export default function loadAboutPage() {
           and professional bartenders.
         </p>
         <a href="#">JOIN OUR TEAM</a>
-        <img src="assets/svg/icons/beer-mug.svg" >
+        <img src="${beer}" >
       `
     });
 

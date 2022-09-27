@@ -17,6 +17,13 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /assets/i,
+        loader: "file-loader",
+        options: {
+          outputPath: "assets"
+        }
       }
     ]
   }
