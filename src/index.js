@@ -6,6 +6,8 @@ import loadMenuPage from "./pages/menu";
 import loadBookingPage from "./pages/booking";
 import loadBlogPage from "./pages/blog";
 
+import logo from "../assets/logo.svg";
+
 function pageLoaderWrapper(loader) {
   window.scrollTo({
     top: 0,
@@ -68,3 +70,5 @@ function addClickEvents() {
         (element.onmousedown = () => pageLoaderWrapper(loadBookingPage))
     );
 }
+
+document.querySelectorAll("img").forEach(img => (img.src = logo));
