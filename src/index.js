@@ -19,8 +19,6 @@ function pageLoaderWrapper(loader) {
   addClickEvents();
 }
 
-pageLoaderWrapper(loadMainPage);
-
 const observer = new IntersectionObserver(entries =>
   entries.forEach(entry => {
     // console.log(entry.target);
@@ -72,3 +70,5 @@ function addClickEvents() {
 }
 
 document.querySelectorAll("img").forEach(img => (img.src = logo));
+
+pageLoaderWrapper(loadMainPage);
