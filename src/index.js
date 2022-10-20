@@ -9,10 +9,7 @@ import loadBlogPage from "./pages/blog";
 import logo from "../assets/logo.svg";
 
 function pageLoaderWrapper(loader) {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo(0, 0);
 
   document.querySelector("main").innerHTML = "";
   loader();
